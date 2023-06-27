@@ -54,7 +54,7 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
   - Bot Race awards: $6,337 USDC 
   - Gas awards: $2,112 USDC 
   - Judge awards: $9,000 USDC 
-  - Lookout awards: $4,000 USDC 
+  - Lookout awards: $6,000 USDC 
   - Scout awards: $500 USDC 
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-06-nouns-dao/submit)
