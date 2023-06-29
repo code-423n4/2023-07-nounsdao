@@ -13,7 +13,7 @@
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-06-nouns-dao/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts July 03, 2023 20:00 UTC
-- Ends July 10, 2023 20:00 UTC
+- Ends July 13, 2023 20:00 UTC
 
 ## Automated Findings / Publicly Known Issues
 
