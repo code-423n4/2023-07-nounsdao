@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "./tsconfig.base.json",
   "include": [
     "utils.ts",
     "./tasks",
@@ -13,7 +13,7 @@
   "files": ["./hardhat.config.ts"],
   "references": [
     {
-      "path": "../nouns-assets/tsconfig.build.json"
+      "path": "./nouns-assets-tsconfig.build.json"
     }
   ]
 }
