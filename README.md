@@ -149,6 +149,8 @@ Main contracts to pay attention to:
 
 ## Files in Scope
 
+Please refer to [this commit](https://github.com/nounsDAO/nouns-monorepo/tree/718211e063d511eeda1084710f6a682955e80dcb) on the nouns monorepo for the version to audit.
+
 | File                                                                            | Lines    | nLines   | nSLOC    | Comment Lines |
 | ------------------------------------------------------------------------------- | -------- | -------- | -------- | ------------- |
 | script/ProposeTimelockMigrationCleanupMainnet.s.sol                             | 102      | 94       | 68       | 12            |
