@@ -1,0 +1,3 @@
+[submodule "nouns-monorepo"]
+	path = nouns-monorepo
+	url = https://github.com/nounsDAO/nouns-monorepo
