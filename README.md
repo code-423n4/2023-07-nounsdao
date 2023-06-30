@@ -68,18 +68,21 @@ The deployment consists of the following scripts:
    2. Set governor proxy's implementation to V3.
    3. Set V3's fork parameters.
    4. Set the proposal ID at which vote snapshot blocks change from proposal creation block to voting period start block.
+   5. Set the auction house owner to treasury v2.
+   6. Approve a ERC20Transferer helper contract to transfer the DAO's stETH tokens.
+   7. Call the transferer's function to move all stETH tokens from treasury v1 to v2.
+   8. Transfer ownership of NounsToken to treasury V2.
+   9. Transfer ownership of NounsToken's descriptor to treasury V2.
+   10. Set the governor's admin and treasury addresses, making treasury v2 the main executor contract and the governor's admin.
+3. [`ProposeTimelockMigrationCleanupMainnet`] Propose additional txs to treasury V1. This proposal will be proposed once `ProposeDAOV3UpgradeMainnet` has been successfully executed. This gives time for proposals using TokenBuyer (asking for USDC)
+   to execute successfully.
+   This script includes the following:
+   1. Transfer ownership of AuctionHouse's proxy admin to treasury V2.
+   2. Transfer ETH leftover from the upgrade proposal to treasury V2.
+   3. Approve treasury V2 to transfer LilNouns NFTs owned by treasury V1.
+   4. Transfer Noun #687 from treasury v1 to v2.
    5. Transfer TokenBuyer ownership to treasury v2.
    6. Transfer Payer ownership to treasury v2 (Payer is a helper contract part of the TokenBuyer).
-   7. Approve a ERC20Transferer helper contract to transfer the DAO's stETH tokens.
-   8. Call the transferer's function to move all stETH tokens from treasury v1 to v2.
-   9. Set the governor's admin and treasury addresses, making treasury v2 the main executor contract and the governor's admin.
-   10. Set the auction house owner to treasury v2.
-3. [`ProposeTimelockMigrationCleanupMainnet`] Propose additional txs to treasury V1, because our governor limits the number of txs per proposal to 10. This script includes the following:
-   1. Transfer ownership of NounsToken to treasury V2.
-   2. Transfer ownership of NounsToken's descriptor to treasury V2.
-   3. Transfer ownership of AuctionHouse's proxy admin to treasury V2.
-   4. Transfer ETH leftover from the upgrade proposal to treasury V2.
-   5. Approve treasury V2 to transfer LilNouns NFTs owned by treasury V1.
 4. [`ProposeENSReverseLookupConfigMainnet`] Propose post-upgrade on treasury V2 to set its ENS reverse lookup to `nouns.eth`.
    1. Worth noting this proposal should only be executed after the owner of `nouns.eth` updates the main record to point to treasury V2 instead of V1. The relevant person from the founders is ready to execute the ENS changes in time.
 
@@ -159,21 +162,6 @@ The solution would be for the fork DAO to execute a proposal that deploys and se
 
 The fork DAO is guaranteed to be able to propose and execute such a proposal, because the function where Nouners claim their fork tokens does not use the descriptor, and so is not vulnerable to this attack.
 
-### Proposals using TokenBuyer could fail to execute
-
-TokenBuyer is the contract Nouns DAO uses to fund proposal builders with USDC rather than ETH. Its payment functions can only be called by its owner, DAO's treasury (executor) contract. The deployment of this version changes the owner to be the new treasury contract (executor v2).
-
-The executor<>governor design is such that a proposal can only be queued once, and it must be executed on the same executor it was queued on.
-
-Therefore, a proposal might have to be resubmitted if it follows a timeline like so:
-
-1. a USDC-paying proposal is queued on the current executor (v1).
-2. the proposal to upgrade is executed; TokenBuyer's owner is changed to executor v2.
-3. someone attempts to execute the USDC-paying proposal on executor V1, and it reverts because V1 isn't TokenBuyer's owner anymore.
-4. someone attempts to execute the proposal on executor v2, and it reverts because the proposal wasn't queued on v2.
-
-Our mitigation to this issue will be communication with the DAO ahead of time, and should we see any proposals in this state, we will contact their proposers immediately and help them re-propose.
-
 ### Forking will fail if NounsToken's minter is not AuctionHouse
 
 In `ForkDAODeployer.deployForDAO()`, the fork's AuctionHouse is initialized with values copied from the original Nouns AuctionHouse, by calling its getter functions. Therefore, if Nouns DAO executes a proposal that sets the token's minter to an account that does not implement the same getters, fork deployments will fail.
@@ -235,6 +223,7 @@ git submodule update --init --recursive
 ```
 
 Install the dependencies with the following:
+
 - Run `yarn` in the `nouns-monorepo/` folder.
 - Run `forge install` in the `nouns-monorepo/packages/nouns-contracts` folder.
 
