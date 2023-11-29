@@ -1,0 +1,393 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q3-2023 / nounsdao-jul03
+==============================================================
+
+[06/29/2023 21:57] kartoonjoy (pinned)
+👋 Hello and welcome to the audit channel for the $100,000 USDC **Nouns DAO** audit!
+
+📆 Audit opens 07/03/2023 20:00 (20:00 UTC) and runs through 07/13/2023 20:00 (20:00 UTC) (10 days).
+
+Please give a warm welcome to the Nouns DAO team, particularly @elad ⌐◨-◨ and @davidbrai, who will be available for questions either here in the channel or via DM in the ET and CET timezone(s).
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/contests/2023-07-nouns-dao
+
+{Reactions}
+👋 (14) ✅ 🚀 (2) 👽 
+
+[06/29/2023 22:41] kartoonjoy
+Pinned a message.
+
+
+[07/03/2023 20:03] mosharaf
+Please provide the available docs here
+
+
+[07/03/2023 20:04] niser93
+Sorry, links inside contest page are not available. They are inside packages/nouns-contract?
+
+
+[07/03/2023 20:05] el4d
+good luck everyone! @davidbrai and I are here to answer your questions 
+
+as always, we kindly ask that you read the entirety of the contest readme before asking 🙏
+
+
+[07/03/2023 20:06] el4d
+the contest readme should give you plenty of context
+
+{Reactions}
+👍 (4) 
+
+[07/03/2023 20:06] addicted2crypto
+Good luck yall... I may not be finding stuff... but I'm learning daily through all the super heros here!
+
+{Reactions}
+🙏 
+
+[07/03/2023 20:56] favelanky
+only mainnet?
+
+{Reactions}
+👍 
+
+[07/03/2023 21:23] el4d
+you might be looking at a different audit, nouns is mainnet only 🙂
+
+{Reactions}
+👍 
+
+[07/04/2023 11:34] cloudellie (pinned)
+**Wardens** - please note that the automated findings output (AKA the winning bot race report 🏆 submitted by @Rolezn is posted below.
+
+These are considered **publicly known issues and are not eligible for awards.**
+
+🤖 **Automated findings:** 
+https://gist.github.com/CloudEllie/deb7d1c9c91b605555cbe604662e58cf
+
+📄 **Code4rena submission guidelines and automated findings policy:** 
+https://docs.code4rena.com/roles/wardens/submission-policy#automated-findings-ineligible
+
+The above link will also be added to the contest README shortly.
+
+{Embed}
+https://gist.github.com/CloudEllie/deb7d1c9c91b605555cbe604662e58cf
+Nouns DAO Code4rena audit, July 2023: Bot report from znBotty
+Nouns DAO Code4rena audit, July 2023: Bot report from znBotty - nouns-dao-bot-report-znbotty.md
+Code4rena - ARCHIVE-Q3-2023 - nounsdao-jul03 [1124093257513717862].txt_Files/gist-og-image-17482.png
+
+{Embed}
+https://docs.code4rena.com/roles/wardens/submission-policy
+Submission policy
+
+
+[07/04/2023 13:56] cloudellie
+Pinned a message.
+
+
+[07/05/2023 11:33] ivok1#4124
+ai
+
+
+[07/05/2023 12:17] co0nan
+Does everthing under `/packages/nouns-contracts` in-scope?
+
+
+[07/05/2023 12:18] davidbrai
+The README specifies exactly which files are in scope
+
+{Reactions}
+👍🏼 (3) 
+
+[07/06/2023 16:28] 0xazez
+Hi , i have a newbie question , anyone can explain this syntax to me? (in NounsDaoLogicV3) , *ds* is StorageV3 struct , so how we call a function using it!! ?
+
+{Attachments}
+Code4rena - ARCHIVE-Q3-2023 - nounsdao-jul03 [1124093257513717862].txt_Files/Screenshot_41-D793D.png
+
+
+[07/06/2023 17:59] davidbrai
+the function is called using the libraries
+
+{Reactions}
+👍 
+
+[07/06/2023 17:59] davidbrai
+for example: `using NounsDAOV3Fork for NounsDAOStorageV3.StorageV3;`
+
+
+[07/06/2023 17:59] davidbrai
+you can read about the `using` keyword for libraries
+
+
+[07/06/2023 18:02] co0nan
+does the function `castVote` on V3 internally calls the same function on V2 ?
+
+
+[07/06/2023 18:36] 0xazez
+ooh ok ok , thanks
+
+
+[07/07/2023 20:35] bauchibred
+Hi @davidbrai, sent a dm
+
+
+[07/08/2023 15:59] senudajay
+Hi @davidbrai , sent a dm
+
+
+[07/09/2023 05:49] 0xg03.14
+Hi @davidbrai , sent a dm
+
+
+[07/09/2023 10:35] 0xnevi
+Hi @davidbrai or @elad ⌐◨-◨ can u check dms?
+
+
+[07/09/2023 15:19] klau5_
+Hi, I have problem with `forge build` and `forge test --ffi` .
+error message is this.
+```
+[⠒] Compiling...
+[⠊] Compiling 202 files with 0.8.19
+Error: 
+Solc Error: 
+```
+I can compile with `yarn hardhat compile` or `yarn build`, this happens only with forge.
+I'm using node v14.18.2, forge version is 0.2.0. I ran `yarn install` and `git submodule update --init --recursive` at monorepo root, and ran `forge install` and build commands at `packages/nouns-contracts`
+
+
+[07/09/2023 19:18] 0xhals
+Hi @davidbrai , sent  you a DM
+
+
+[07/10/2023 14:59] fulum
+HI @davidbrai, I dm you 👍
+
+
+[07/12/2023 07:13] 0xrizwan
+@davidbrai Please check DM.
+
+
+[07/12/2023 10:47] kutugu
+@davidbrai dmed
+
+
+[07/12/2023 12:56] jgcarv
+@davidbrai and @elad ⌐◨-◨ Do proposers also have to vote on their proposals?
+
+
+[07/12/2023 16:29] el4d
+it's optional
+
+
+[07/12/2023 17:07] 0xrizwan
+@elad ⌐◨-◨ sent you DM.
+
+{Reactions}
+👍 
+
+[07/13/2023 11:13] 0xrizwan
+@davidbrai sent you DM.
+
+
+[07/13/2023 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺wardens The **Nouns DAO** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the audit is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a Contest-Admin if you have questions along the way!
+
+{Reactions}
+🫡 (15) 👽 (3) 🔥 (2) 
+
+[07/24/2023 12:30] articoloquinto
+hello @kartoonjoy any updates on how the report is going and when it will be finished?
+
+
+[07/24/2023 12:54] itsmetechjay
+We'll post updates on how the audit is progressing in the #📢announcements channel.
+
+
+[07/24/2023 12:56] articoloquinto
+any eta? like few days or weeks?
+
+
+[07/24/2023 12:58] itsmetechjay
+These are our estimated timelines: https://docs.code4rena.com/structure/our-process
+
+{Embed}
+https://docs.code4rena.com/structure/our-process
+Audit timeline
+This is a high level overview of the C4 audit timeline. We have an increasingly detailed operational manual in Notion.
+
+
+[07/24/2023 12:59] articoloquinto
+thanks
+
+{Reactions}
+👍 
+
+[07/28/2023 17:13] liveactionllamac4
+🤑 🎉  Awards for **Nouns DAO**:
+
+$31,683.75 USDC » @cccz  
+$15,841.87 USDC » @kutu 
+$5,196.93 USDC » @jasonxiale 
+$4,056.61 USDC » @said  
+$3,997.64 USDC » @0xG0P1  
+$3,997.64 USDC » @0xA5DF  
+$3,997.64 USDC » @iglyx  
+$2,874.81 USDC » @shark  
+$1,405.81 USDC » @0xnev  
+$1,081.39 USDC » @0xSmartContract  
+$787.66 USDC » @c3phas 
+$610.77 USDC » @Santiago Moreno  
+$605.89 USDC » @JCN  
+$277.78 USDC » @ihtishamsudo  
+$274.10 USDC » @K42 Ψ  
+$218.80 USDC » @Matin  
+$114.28 USDC » @klau5 
+$114.28 USDC » @MohammedRizwan  
+$58.98 USDC » @Bauchibred  
+$58.98 USDC » @koxuan 
+$58.98 USDC » @descharre  
+$58.98 USDC » @0xMilenov  
+$58.98 USDC » @nadin  
+$58.98 USDC » @Emmanuel  
+$58.98 USDC » @codegpt  
+$58.98 USDC » @Kaysoft  
+$55.30 USDC » @dharma09 
+$55.30 USDC » @hunter_w3b 
+$55.30 USDC » @code-cipher  
+$55.30 USDC » @SAQ  
+$55.30 USDC » @SM3_SS  
+$55.30 USDC » @naman1778  
+$55.30 USDC » @0xAnah  
+$55.30 USDC » @petrichor🦖  
+$55.30 USDC » @smartstar  
+$55.30 USDC » @Raihan 
+
+🏁 Findings summary
+--------------------------------------—
+High risk findings: 6 total, 1 unique
+Med risk findings: 3 total, 3 unique
+Gas reports: 15
+QA reports: 14
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+❤️ (6) 🚀 (2) 🎉 (3) 🔥 (4) 👽 
+
+[07/28/2023 17:14] el4d
+congrats and thanks all wardens 🚀
+
+{Reactions}
+🎉 (9) 🙏 (3) ❤️ (2) 
+
+[07/28/2023 17:21] ihtishamsudo
+Alhamdullilah, Hats off to all the warden who participated in securing this protocol.
+
+{Reactions}
+❤️ (5) 🦾 🎉 (2) 
+
+[07/28/2023 17:25] 0xnevi
+The one contract i didnt look had a high in it lesson learnt dont skip contracts 🥲
+
+Congrats guys 😊
+
+{Reactions}
+🙏 (2) 🚀 🎉 (4) 
+
+[07/28/2023 19:18] petrichor0961
+Pufff idk what to say
+
+{Reactions}
+😜 (2) 👍 (2) 
+
+[07/28/2023 19:57] t1moh
+3 solo meds among 4 issues wow
+
+
+[07/28/2023 22:25] pascal9476
+Results already out ??
+
+
+[07/28/2023 22:25] pascal9476
+Kinda quick
+
+
+[07/30/2023 18:28] fulum
+Where you can see the details of the findings? 🙂
+
+
+[07/30/2023 18:47] 0xnevi
+Backstage role. Cant discuss details tho unless u have it yourself to see it
+
+{Reactions}
+👍 
+
+[07/31/2023 17:35] saq_143
+Award ?
+
+
+[07/31/2023 21:03] dash_888
+Report tweet is live: https://twitter.com/code4rena/status/1686103530459774976?s=20 🎉
+
+{Embed}
+Code4rena (@code4rena)
+https://twitter.com/code4rena/status/1686103530459774976?s=20
+The report is in for @nounsdao's audit with Code4rena 🔎
+
+In securing the protocol, C4 Wardens uncovered:
+
+High risk: 6 total, 1 unique
+Med risk: 3 total, 3 unique
+Gas reports: 15
+QA reports: 14
+
+Read more: https://t.co/PqIZAVRuJ4
+Code4rena - ARCHIVE-Q3-2023 - nounsdao-jul03 [1124093257513717862].txt_Files/F2Y-OI0WUAEF5Sc-C924F.jpg
+Twitter
+
+{Reactions}
+🔥 (10) 
+
+[08/01/2023 05:36] ihtishamsudo
+Label judges Quality as (grade-a)(high-quality) for delivering results quick
+
+{Reactions}
+👍 
+
+[08/01/2023 08:51] dwward3n
+How is this so fast?
+
+
+[08/01/2023 08:55] c145h
+This was a bit special, extra-ordinary 😀
+
+
+[08/01/2023 11:20] stormreckson
+Fastest! judges are drank Nitro 😂
+
+
+[08/01/2023 12:09] woolcentaur
+If I submitted something and it didn't make the cut, is there any way I can check on the evaluation of my submission?
+
+
+[08/01/2023 12:12] ihtishamsudo
+Github repo of nouns finding on c4 github
+
+
+[08/01/2023 12:30] woolcentaur
+Ahh thank you!
+
+
+==============================================================
+Exported 58 message(s)
+==============================================================
